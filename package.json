@@ -1,0 +1,27 @@
+{
+  "name": "gild-recaptcha-v3-solver",
+  "version": "1.0.0",
+  "description": "GILD Recaptcha V3 Solver - local token API powered by a Chrome fleet (educational use only)",
+  "main": "src/gild-server.mjs",
+  "type": "module",
+  "keywords": [
+    "recaptcha",
+    "v3",
+    "solver",
+    "gild"
+  ],
+  "author": "GILD (t.me/gild_eng)",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/gild-server.mjs",
+    "batch": "node src/gild-batch.mjs",
+    "build": "esbuild src/gild-server.mjs --bundle --platform=node --format=cjs --outfile=dist/gild-bundle.cjs && node --experimental-sea-config sea-config.json && node -e \"require('fs').copyFileSync(process.execPath,'GILD RECAPTCHA V3 SOLVER.exe')\" && postject GILD RECAPTCHA V3 SOLVER.exe NODE_SEA_BLOB dist/sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2"
+  },
+  "dependencies": {
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "postject": "^1.0.0-alpha.6"
+  }
+}

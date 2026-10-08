@@ -1,0 +1,22 @@
+﻿# dependencies
+node_modules/
+
+# local config (keep your keys private)
+.env
+proxies.txt
+
+# runtime output
+tokens.txt
+*.log
+
+# original binary + extracted bundle (do not redistribute)
+*.exe
+bundle/
+
+# misc
+.DS_Store
+Thumbs.db
+
+dist/
+GILD RECAPTCHA V3 SOLVER.exe
+
